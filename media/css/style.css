@@ -2486,9 +2486,14 @@ section.inner-joblist {
     color: rgba(51, 51, 51, 0.54);
 }
 
+.labels-wrapper:last-child{
+    margin-left: 40px;
+}
+
 .labels-wrapper .jxt-result-loc,
 .labels-wrapper .jxt-result-salary,
-.labels-wrapper .jxt-result-worktype {
+.labels-wrapper .jxt-result-worktype,
+.labels-wrapper .jxt-result-sal {
     display: block;
     position: relative;
     color: rgba(51, 51, 51, 0.87);
@@ -2542,6 +2547,19 @@ section.inner-joblist {
     left: -43px;
 }
 
+.jxt-result-sal:before {
+    position: absolute;
+    content: "";
+    width: 33px;
+    height: 35px;
+    background-image: url(../images/salary.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -19px;
+    left: -43px;
+    background-size: 109%;
+}
+
 .job-toplink a {
     color: #662d91;
     font-family: 'GothamRounded-Medium';
@@ -2552,7 +2570,8 @@ section.inner-joblist {
 }
 
 .labels-wrapper .jxt-result-worktype,
-.labels.worktype-label {
+.labels.worktype-label,
+.jxt-result-sal {
     margin-left: 70px;
 }
 
@@ -3169,8 +3188,27 @@ iframe[name="indconv"] {
     left: 18px;
     background-size: 70%;
 }
+#myJobsList .job-box .sal:before {
+    /* position: absolute; */
+    content: "";
+    width: 25px;
+    height: 17px;
+    background-image: url(../images/salary.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 45px;
+    left: 16px;
+    background-size: 87%;
+    display: inline-block;
+    margin-right: 5px;
+}
+#myJobsList .job-box .sal{
+    float:right;
+    margin: 22px 10px 0 0;
+}
 #myJobsList .job-box .xmlLocation{
     padding-top: 20px;
+    display: inline-block;
 }
 #myJobsList .job-box .xmlLocation:before{
     top: 66px;
@@ -3681,7 +3719,8 @@ span.jxt-result-salary.salary {
         MARGIN-TOP: 10PX;
     }
     .labels-wrapper .jxt-result-worktype,
-    .labels.worktype-label {
+    .labels.worktype-label,
+    .jxt-result-sal {
         margin-left: 0px;
     }    
     .nav-profile{
@@ -3907,7 +3946,7 @@ span.jxt-result-salary.salary {
         margin-left: 40px;
     }
     .labels-wrapper .jxt-result-worktype,
-    .labels.worktype-label {
+    .labels.worktype-label, .jxt-result-sal {
         margin-left: 28px;
     }
     .advace-job input[type="text"] {
@@ -4047,7 +4086,7 @@ span.jxt-result-salary.salary {
 }
 @media (max-width:600px) {
     .labels-wrapper .jxt-result-worktype,
-    .labels.worktype-label {
+    .labels.worktype-label, .jxt-result-sal {
         margin-left: 0px;
     }
     .locandsalary .labels-wrapper:nth-child(5) {
